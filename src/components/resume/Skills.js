@@ -8,10 +8,10 @@ import ResumeTitle from "./ResumeTitle";
 
 const Skills = () => {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 px-4 lg:px-6">
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 px-4 lg:px-6 md:gap-10">
 
       {/* =============== Coding Start here ==================== */}
-      <div className="col-span-1 md:col-span-1">
+      <div className="col-span-1">
         <ResumeTitle title="Coding" icon={<BiCodeAlt />} />
         {/* Skill bars for coding */}
         <div className="py-4">
@@ -25,35 +25,35 @@ const Skills = () => {
           <SkillBar title="Django" percentage={80} />
         </div>
       </div>
-    
+
       {/* =============== Knowledge Start here ==================== */}
-      <div className="col-span-1 md:col-span-1">
+      <div className="col-span-1">
         <ResumeTitle title="Knowledge" icon={<IoIosPaper />} />
-        <ul className="py-4 flex flex-col gap-2">
+        <ul className="py-4 flex flex-col gap-2 border-b-[1px] border-b-zinc-800">
           <KnowledgeItem text="Website hosting" />
-          <KnowledgeItem text="Object Oriented Programming" />
-          <KnowledgeItem text="Operating System" />
+          <KnowledgeItem text="Object-Oriented Programming" />
+          <KnowledgeItem text="Operating Systems" />
           <KnowledgeItem text="Computer Networks" />
           <KnowledgeItem text="Machine Learning" />
           <KnowledgeItem text="Problem Solving" />
-          <KnowledgeItem text="Data Structures & Algorithm" />
+          <KnowledgeItem text="Data Structures & Algorithms" />
           <KnowledgeItem text="Artificial Intelligence" />
         </ul>
       </div>
 
       {/* =============== Design Start here ==================== */}
-      <div className="col-span-1 md:col-span-1">
+      <div className="col-span-1">
         <ResumeTitle title="Design" icon={<SiArtstation />} />
         <div className="py-4">
           <SkillBar title="Web Development" percentage={95} />
           <SkillBar title="Full Stack Development" percentage={90} />
-          <SkillBar title="Mobile Application" percentage={85} />
+          <SkillBar title="Mobile Applications" percentage={85} />
           <SkillBar title="Android Development" percentage={80} />
         </div>
       </div>
-    
+
       {/* =============== Languages Start here ==================== */}
-      <div className="col-span-1 md:col-span-1">
+      <div className="col-span-1">
         <ResumeTitle title="Languages" icon={<FaFlag />} />
         <div className="py-4">
           <LanguageBar title="English" percentage={100} />
@@ -71,7 +71,7 @@ const SkillBar = ({ title, percentage }) => (
   <div className="py-3 border-b border-zinc-800">
     <p className="text-base text-textColor -mb-1">{title}</p>
     <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-      <span className={`w-[${percentage}%] h-full absolute top-0 left-0 bg-designColor`} />
+      <span className={`w-[${percentage}%] h-full absolute top-0 left-0 bg-designColor transition-all duration-300`}></span>
     </span>
   </div>
 );
@@ -89,7 +89,7 @@ const LanguageBar = ({ title, percentage }) => (
   <div className="py-3 border-b border-zinc-800">
     <p className="text-base text-textColor -mb-1">{title}</p>
     <span className="w-full bg-zinc-600 h-1 inline-flex relative">
-      <span className={`w-[${percentage}%] h-full absolute top-0 left-0 bg-designColor`} />
+      <span className={`w-[${percentage}%] h-full absolute top-0 left-0 bg-designColor transition-all duration-300`}></span>
     </span>
   </div>
 );
